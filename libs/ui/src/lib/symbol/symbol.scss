@@ -1,0 +1,45 @@
+:host {
+  display: block;
+}
+
+.symbol {
+  text-align: center;
+}
+
+img {
+  filter: invert(1);
+  height: 384px;
+  width: 384px;
+}
+
+h3,
+h4,
+p {
+  margin-top: 1rem;
+}
+
+h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+h4 {
+  background: linear-gradient(135deg, var(--divine-blue), var(--divine-purple));
+  border-radius: 20px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+}
+
+p {
+  color: var(--divine-white);
+}
+
+button {
+  background-color: var(--divine-purple-750);
+  color: var(--divine-white) !important;
+}

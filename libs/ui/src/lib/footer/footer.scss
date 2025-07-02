@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+footer {
+  background-color: var(--divine-purple-050);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--divine-purple-200);
+  bottom: 0;
+  font-size: 0.9rem;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}

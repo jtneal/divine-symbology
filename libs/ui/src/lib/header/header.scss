@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+header {
+  max-width: 890px;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    color: rgba(122, 73, 157, 0.75);
+    font-size: 1.38rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    text-shadow: 2px 2px 4px #000;
+  }
+}
