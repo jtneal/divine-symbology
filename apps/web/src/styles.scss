@@ -35,7 +35,6 @@ html {
 
   @include mat.form-field-overrides(
     (
-      leading-icon-color: var(--divine-purple-500),
       outlined-container-shape: var(--divine-radius),
       outlined-focus-label-text-color: var(--divine-off-white),
       outlined-focus-outline-color: var(--divine-purple-750),
@@ -44,6 +43,7 @@ html {
       outlined-input-text-color: var(--divine-off-white),
       outlined-label-text-color: var(--divine-off-white),
       outlined-outline-color: var(--divine-purple-500),
+      trailing-icon-color: var(--divine-purple-500),
     )
   );
 
