@@ -5,15 +5,17 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@angular/cdk": "~20.0.4",
+    "@angular/cdk": "~20.0.0",
     "@angular/common": "~20.0.0",
     "@angular/compiler": "~20.0.0",
     "@angular/core": "~20.0.0",
     "@angular/forms": "~20.0.0",
-    "@angular/material": "~20.0.4",
+    "@angular/material": "~20.0.0",
     "@angular/platform-browser": "~20.0.0",
     "@angular/platform-browser-dynamic": "~20.0.0",
+    "@angular/pwa": "^20.0.0",
     "@angular/router": "~20.0.0",
+    "@angular/service-worker": "~20.0.0",
     "rxjs": "~7.8.0"
   },
   "devDependencies": {
@@ -23,7 +25,6 @@
     "@angular/cli": "~20.0.0",
     "@angular/compiler-cli": "~20.0.0",
     "@angular/language-service": "~20.0.0",
-    "@angular/material": "^20.0.4",
     "@eslint/js": "^9.8.0",
     "@nx/angular": "21.2.1",
     "@nx/devkit": "21.2.1",

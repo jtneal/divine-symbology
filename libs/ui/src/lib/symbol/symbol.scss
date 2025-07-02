@@ -24,27 +24,27 @@ p {
 }
 
 h3 {
-  color: #fff;
+  color: var(--divine-white);
   font-size: 1.5rem;
   line-height: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 0.5);
   text-transform: uppercase;
 }
 
 h4 {
   background: linear-gradient(135deg, var(--divine-blue), var(--divine-purple));
   border-radius: 20px;
-  color: #fff;
+  color: var(--divine-white);
   display: inline-block;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
 }
 
 p {
-  color: var(--divine-white);
+  color: var(--divine-off-white);
 }
 
 button {
   background-color: var(--divine-purple-750);
-  color: var(--divine-white) !important;
+  color: var(--divine-off-white) !important;
 }

@@ -1,11 +1,11 @@
 @use '@angular/material' as mat;
-@use '../public/styles/_theme-colors' as divine-theme;
 
 :root {
   --divine-black-200: rgb(0 0 0 / 0.2);
   --divine-black-750: rgb(0 0 0 / 0.75);
   --divine-blue: rgb(99 102 241 / 1);
   --divine-dark-purple: rgb(21 13 25 / 1);
+  --divine-off-white: rgb(203 213 225 / 1);
   --divine-purple: rgb(168 85 247 / 1);
   --divine-purple-050: rgb(168 85 247 / 0.05);
   --divine-purple-100: rgb(168 85 247 / 0.1);
@@ -15,8 +15,8 @@
   --divine-purple-500: rgb(168 85 247 / 0.5);
   --divine-purple-625: rgb(168 85 247 / 0.625);
   --divine-purple-750: rgb(168 85 247 / 0.75);
-  --divine-radius: 12px;
-  --divine-white: rgb(203 213 225 / 1);
+  --divine-radius: 0.75rem;
+  --divine-white: rgb(255 255 255 / 1);
 }
 
 * {
@@ -37,12 +37,12 @@ html {
     (
       leading-icon-color: var(--divine-purple-500),
       outlined-container-shape: var(--divine-radius),
-      outlined-focus-label-text-color: var(--divine-white),
+      outlined-focus-label-text-color: var(--divine-off-white),
       outlined-focus-outline-color: var(--divine-purple-750),
-      outlined-hover-label-text-color: var(--divine-white),
+      outlined-hover-label-text-color: var(--divine-off-white),
       outlined-hover-outline-color: var(--divine-purple-625),
-      outlined-input-text-color: var(--divine-white),
-      outlined-label-text-color: var(--divine-white),
+      outlined-input-text-color: var(--divine-off-white),
+      outlined-label-text-color: var(--divine-off-white),
       outlined-outline-color: var(--divine-purple-500),
     )
   );
@@ -50,7 +50,7 @@ html {
   @include mat.select-overrides(
     (
       enabled-arrow-color: var(--divine-purple-500),
-      enabled-trigger-text-color: var(--divine-white),
+      enabled-trigger-text-color: var(--divine-off-white),
       focused-arrow-color: var(--divine-purple-500),
       panel-background-color: var(--divine-dark-purple),
     )
@@ -59,13 +59,13 @@ html {
   @include mat.option-overrides(
     (
       hover-state-layer-color: var(--divine-purple-100),
-      label-text-color: var(--divine-white),
+      label-text-color: var(--divine-off-white),
     )
   );
 
   @include mat.dialog-overrides(
     (
-      subhead-color: #fff,
+      subhead-color: var(--divine-white),
     )
   );
 
@@ -76,7 +76,7 @@ html {
       extended-container-height: 3rem,
       extended-container-shape: var(--divine-radius),
       extended-label-text-size: 1rem,
-      foreground-color: var(--divine-white),
+      foreground-color: var(--divine-off-white),
       hover-state-layer-opacity: 1,
       ripple-color: var(--divine-purple-500),
       state-layer-color: var(--divine-purple-200),
@@ -99,7 +99,7 @@ html {
   }
 
   .mat-mdc-dialog-surface {
-    background-image: linear-gradient(to bottom right, rgb(109, 25, 170), rgb(18, 16, 83));
+    background-image: linear-gradient(to bottom right, rgb(109 25 170 / 1), rgb(18 16 83 / 1));
     border: 1px solid var(--divine-purple-750);
   }
 
@@ -116,14 +116,14 @@ body {
 
 body {
   background-color: var(--divine-dark-purple);
-  color: var(--divine-white);
+  color: var(--divine-off-white);
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 2rem;
 }
 
 a {
-  color: var(--divine-white);
+  color: var(--divine-off-white);
   text-decoration: none;
 
   &:hover {
