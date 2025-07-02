@@ -8,8 +8,13 @@
 
 img {
   filter: invert(1);
-  height: 384px;
-  width: 384px;
+  height: 298px;
+  width: 298px;
+
+  @media (min-width: 700px) {
+    height: 384px;
+    width: 384px;
+  }
 }
 
 h3,

@@ -10,18 +10,35 @@ main {
 
 .filters {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
 
   .flex-col:first-child {
     flex: 1;
   }
 
   .categories {
-    width: 327px;
+    max-width: 100%;
+    width: 100%;
+
+    @media (min-width: 700px) {
+      width: 327px;
+    }
   }
 
   mat-form-field {
     width: 100%;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
 
   mat-icon {

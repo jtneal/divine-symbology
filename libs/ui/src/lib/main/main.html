@@ -1,7 +1,7 @@
 <main>
   <section class="filters">
     <div class="flex-col">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
         <mat-label>Search</mat-label>
         <mat-icon matPrefix>search</mat-icon>
         <input [formControl]="search" matInput type="search" />
@@ -17,12 +17,14 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <button class="fab" (click)="random()" matFab matTooltip="Let spirit guide you" matTooltipPosition="above">
-      <mat-icon>self_improvement</mat-icon>
-    </button>
-    <button (click)="shuffle(symbols())" matFab matTooltip="Shuffle" matTooltipPosition="above">
-      <mat-icon>shuffle</mat-icon>
-    </button>
+    <div class="flex-col actions">
+      <button class="fab" (click)="random()" matFab matTooltip="Let spirit guide you" matTooltipPosition="above">
+        <mat-icon>self_improvement</mat-icon>
+      </button>
+      <button (click)="shuffle(symbols())" matFab matTooltip="Shuffle" matTooltipPosition="above">
+        <mat-icon>shuffle</mat-icon>
+      </button>
+    </div>
   </section>
   <section class="symbols">
     @for (symbol of displayed; track $index) {

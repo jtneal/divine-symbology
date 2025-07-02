@@ -7,12 +7,20 @@ header {
   margin: 0 auto;
   text-align: center;
 
+  img {
+    max-width: 100%;
+  }
+
   p {
     color: rgba(122, 73, 157, 0.75);
-    font-size: 1.38rem;
+    font-size: 0.95rem;
     font-style: italic;
     line-height: 1.5;
     margin-top: 1.5rem;
     text-shadow: 2px 2px 4px #000;
+
+    @media (min-width: 700px) {
+      font-size: 1.38rem;
+    }
   }
 }
