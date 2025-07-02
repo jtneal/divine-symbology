@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppService } from '@divine-symbology/data-access';
+import { of } from 'rxjs';
 import { Home } from './home';
 
 describe(Home.name, () => {
@@ -8,6 +10,12 @@ describe(Home.name, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Home],
+      providers: [
+        {
+          provide: AppService,
+          useValue: { getSymbols: () => of([]) },
+        },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Home);

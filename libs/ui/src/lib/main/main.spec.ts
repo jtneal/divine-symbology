@@ -12,6 +12,7 @@ describe(Main.name, () => {
 
     fixture = TestBed.createComponent(Main);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('symbols', []);
     fixture.detectChanges();
   });
 
