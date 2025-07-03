@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Divine Symbology</string>
+    <string name="title_activity_main">Divine Symbology</string>
+    <string name="package_name">com.divinesymbology</string>
+    <string name="custom_url_scheme">com.divinesymbology</string>
+</resources>
