@@ -54,7 +54,11 @@ main {
 .symbols {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
   button {
     background-color: var(--divine-purple-050);
