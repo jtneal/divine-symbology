@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-2" points="52.92 110.25 75.55 44.7 98.08 110.21 42.88 68.14 108.44 68.14 52.92 110.25"/>
+  <polygon class="cls-2" points="31.82 69.91 25.73 69.91 28.78 64.63 31.82 59.35 34.87 64.63 37.92 69.91 31.82 69.91"/>
+  <polygon class="cls-2" points="118.18 60.46 124.27 60.46 121.22 65.74 118.18 71.02 115.13 65.74 112.08 60.46 118.18 60.46"/>
+  <polygon class="cls-2" points="109.62 124.54 103.53 124.54 106.57 119.26 109.62 113.98 112.67 119.26 115.71 124.54 109.62 124.54"/>
+  <ellipse class="cls-2" cx="75.66" cy="30.31" rx="5.38" ry="5.39"/>
+  <line class="cls-1" x1="28.14" y1="65.74" x2="35.51" y2="65.74"/>
+  <polygon class="cls-2" points="41.61 115.09 47.7 115.09 44.65 120.37 41.61 125.65 38.56 120.37 35.51 115.09 41.61 115.09"/>
+  <line class="cls-1" x1="45.3" y1="119.26" x2="37.92" y2="119.26"/>
+</svg>
