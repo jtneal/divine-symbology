@@ -79,6 +79,10 @@ export class Main implements OnInit {
   reset(): void {
     this.categories.setValue('');
     this.search.setValue('');
+
+    if (this.showFavorites) {
+      this.toggleFavorites();
+    }
   }
 
   shuffle(symbols: SymbolDto[]): void {
