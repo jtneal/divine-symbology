@@ -18,11 +18,14 @@
       </mat-form-field>
     </div>
     <div class="flex-col actions">
-      <button class="fab" (click)="random()" matFab matTooltip="Let spirit guide you" matTooltipPosition="above">
-        <mat-icon>self_improvement</mat-icon>
+      <button (click)="reset()" matFab matTooltip="Reset" matTooltipPosition="above">
+        <mat-icon>replay</mat-icon>
       </button>
       <button (click)="shuffle(symbols())" matFab matTooltip="Shuffle" matTooltipPosition="above">
         <mat-icon>shuffle</mat-icon>
+      </button>
+      <button class="fab" (click)="random()" matFab matTooltip="Let spirit guide you" matTooltipPosition="above">
+        <mat-icon>self_improvement</mat-icon>
       </button>
     </div>
   </section>
