@@ -13,7 +13,7 @@ main {
   flex-direction: column;
   gap: 1rem;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     flex-direction: row;
   }
 
@@ -25,8 +25,8 @@ main {
     max-width: 100%;
     width: 100%;
 
-    @media (min-width: 700px) {
-      width: 283px;
+    @media (min-width: 900px) {
+      width: 426px;
     }
   }
 
@@ -37,7 +37,7 @@ main {
   .actions {
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 1rem;
   }
 
@@ -57,7 +57,7 @@ main {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
