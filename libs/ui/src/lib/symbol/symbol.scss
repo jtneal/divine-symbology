@@ -47,4 +47,19 @@ p {
 button {
   background-color: var(--divine-purple-750);
   color: var(--divine-off-white) !important;
+
+  &.favorite {
+    background: none;
+    border: none;
+    bottom: 1rem;
+    color: var(--divine-purple-750) !important;
+    cursor: pointer;
+    left: 1.5rem;
+    position: absolute;
+    transform: scale(1.5);
+
+    &:hover {
+      color: var(--divine-purple) !important;
+    }
+  }
 }
