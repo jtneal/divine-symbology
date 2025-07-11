@@ -43,18 +43,18 @@ export class Main implements OnInit {
 
     this.setCategories(symbols);
 
-    const savedCategories = JSON.parse(localStorage.getItem('selectedCategories') ?? '[]');
+    const savedCategories = localStorage.getItem('selectedCategories');
     const savedSearch = localStorage.getItem('searchTerm');
 
     if (savedCategories) {
-      this.categories.setValue(savedCategories);
+      this.categories.setValue(JSON.parse(savedCategories));
     }
 
     if (savedSearch) {
       this.search.setValue(savedSearch);
     }
 
-    this.shuffle(symbols)
+    this.shuffle(symbols);
 
     const handler = () => {
       localStorage.setItem('selectedCategories', JSON.stringify(this.categories.value ?? []));
