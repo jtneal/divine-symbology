@@ -40,13 +40,30 @@ export class Main implements OnInit {
 
   ngOnInit(): void {
     const symbols = this.symbols();
-    const shuffler = () => this.shuffle(symbols);
 
     this.setCategories(symbols);
 
-    shuffler();
-    this.categories.valueChanges.subscribe(shuffler);
-    this.search.valueChanges.subscribe(shuffler);
+    const savedCategories = localStorage.getItem('selectedCategories');
+    const savedSearch = localStorage.getItem('searchTerm');
+
+    if (savedCategories) {
+      this.categories.setValue(JSON.parse(savedCategories));
+    }
+
+    if (savedSearch) {
+      this.search.setValue(savedSearch);
+    }
+
+    this.shuffle(symbols);
+
+    const handler = () => {
+      localStorage.setItem('selectedCategories', JSON.stringify(this.categories.value ?? []));
+      localStorage.setItem('searchTerm', this.search.value ?? '');
+      this.shuffle(symbols);
+    };
+
+    this.categories.valueChanges.subscribe(handler);
+    this.search.valueChanges.subscribe(handler);
   }
 
   setCategories(symbols: SymbolDto[]): void {
