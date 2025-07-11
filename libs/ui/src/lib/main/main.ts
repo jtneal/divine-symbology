@@ -53,6 +53,11 @@ export class Main implements OnInit {
     this.categoryList = [...new Set(symbols.map((symbol) => symbol.category))];
   }
 
+  reset(): void {
+    this.categories.setValue('');
+    this.search.setValue('');
+  }
+
   shuffle(symbols: SymbolDto[]): void {
     let filtered = symbols;
 
