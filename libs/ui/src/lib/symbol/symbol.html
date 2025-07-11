@@ -6,5 +6,8 @@
   <p>{{ symbol.description }}</p>
 </mat-dialog-content>
 <mat-dialog-actions data-align="end">
+  <button class="favorite" (click)="toggleFavorite()">
+    <mat-icon>{{ favorite ? 'favorite' : 'favorite_outline' }}</mat-icon>
+  </button>
   <button matButton mat-dialog-close>Close</button>
 </mat-dialog-actions>

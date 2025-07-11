@@ -33,6 +33,8 @@ export class Main implements OnInit {
   categoryList = [] as string[];
   displayed = [] as SymbolDto[];
   shuffled = [] as SymbolDto[];
+  favorites = [] as string[];
+  showFavorites = false;
 
   get showViewMore(): boolean {
     return this.displayed.length < this.shuffled.length;
@@ -40,11 +42,11 @@ export class Main implements OnInit {
 
   ngOnInit(): void {
     const symbols = this.symbols();
-
-    this.setCategories(symbols);
-
     const savedCategories = localStorage.getItem('selectedCategories');
     const savedSearch = localStorage.getItem('searchTerm');
+    const savedFavorites = localStorage.getItem('showFavorites');
+
+    this.setCategories(symbols);
 
     if (savedCategories) {
       this.categories.setValue(JSON.parse(savedCategories));
@@ -54,7 +56,11 @@ export class Main implements OnInit {
       this.search.setValue(savedSearch);
     }
 
-    this.shuffle(symbols);
+    if (savedFavorites === 'true') {
+      this.toggleFavorites();
+    } else {
+      this.shuffle(symbols);
+    }
 
     const handler = () => {
       localStorage.setItem('selectedCategories', JSON.stringify(this.categories.value ?? []));
@@ -90,6 +96,10 @@ export class Main implements OnInit {
       );
     }
 
+    if (this.showFavorites) {
+      filtered = filtered.filter((symbol) => this.favorites.includes(`${symbol.category}:${symbol.name}`));
+    }
+
     for (let current = filtered.length - 1; current > 0; current--) {
       const random = Math.floor(Math.random() * current);
       const temp = filtered[current];
@@ -100,6 +110,13 @@ export class Main implements OnInit {
 
     this.shuffled = filtered;
     this.displayed = filtered.slice(0, 25);
+  }
+
+  toggleFavorites(): void {
+    this.showFavorites = !this.showFavorites;
+    localStorage.setItem('showFavorites', String(this.showFavorites));
+    this.favorites = JSON.parse(localStorage.getItem('favorites') ?? '[]') as string[];
+    this.shuffle(this.symbols());
   }
 
   random(): void {
