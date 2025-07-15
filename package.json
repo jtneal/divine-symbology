@@ -17,6 +17,7 @@
     "@angular/router": "~20.0.0",
     "@angular/service-worker": "~20.0.0",
     "@capacitor/android": "^7.4.0",
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.4.0",
     "@capacitor/core": "^7.4.0",
     "@capacitor/ios": "^7.4.0",
