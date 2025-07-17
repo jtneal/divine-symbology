@@ -1,21 +1,4 @@
 {
-  "name": "Divine Symbology",
-  "short_name": "Divine",
-  "description": "Unlock the hidden power of sacred symbols that have guided human consciousness for millennia. Journey from the wisdom of ancient civilizations to the heart of modern spirituality, and discover the timeless truths woven through them all.",
-  "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
-  "background_color": "#150d19",
-  "theme_color": "#a955f7",
-  "orientation": "portrait-primary",
-  "categories": [
-    "education",
-    "lifestyle",
-    "travel",
-    "utilities"
-  ],
-  "lang": "en-US",
-  "dir": "ltr",
   "icons": [
     {
       "src": "../icons/icon-48.webp",
